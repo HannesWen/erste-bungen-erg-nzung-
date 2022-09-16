@@ -10,60 +10,43 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Gib mir bitte zwei Zahlen()");
-            double zahl1 = Convert.ToDouble.(Console.ReadLine());
-            double zahl2 = Convert.ToDouble.(Console.ReadLine());
+            // Array befüllen und mit werten befüllen
+            //Random r = new Random();
+            //Console.WriteLine("Wie viele Einträge möchtest du in deinem int Array?");
+            //int arraygröße = Convert.ToInt32(Console.ReadLine());
+            //int[] zahlen = new int[arraygröße];
+            //for (int i = 0; i < arraygröße; i++)
+            //{
+            //    int random_zahl = r.Next(1, 100);
+            //    zahlen[i] = random_zahl;
+            //}
+            //foreach (int zahl in zahlen)
+            //{
+            //    Console.WriteLine(zahl);
+            //}
+            //Console.ReadKey();
 
-            double ergebnis = Add(zahl1, zahl2);
-            Console.WriteLine("Das Ergebnis der addition lautet " + ergebnis);
+            // Array befüllen und summe sowie durschnitt ausgeben
+            //Random r = new Random();
+            //Console.WriteLine("Wie viele Einträge möchtest du in deinem int Array?");
+            //int arraygröße = Convert.ToInt32(Console.ReadLine());
+            //int[] zahlen = new int[arraygröße];
+            //for (int i = 0; i < arraygröße; i++)
+            //{
+            //    int random_zahl = r.Next(1, 100);
+            //    zahlen[i] = random_zahl;
+            //}
+            //double durchschnitt = zahlen.Average();
+            //int summe = zahlen.Sum();
+            //Console.WriteLine("Die Summe ist: " + summe);
+            //Console.WriteLine("Der Durschschnitt ist: " + durchschnitt);
+            //Console.ReadKey();
 
-            double ergebnis1 = Multiply(zahl1, zahl2);
-            Console.WriteLine("Das Ergebnis der multiplikation lautet " + ergebnis1);
 
-            double ergebnis2 = subtract(zahl1, zahl2);
-            Console.WriteLine("Das Ergebnis der subtraktion lautet " + ergebnis2);
 
-            double ergebnis3 = divide(zahl1, zahl2);
-            Console.WriteLine("Das Ergebnis der division lautet " + ergebnis3);
+            
 
-            Console.ReadKey();
+
         }
-
-        static double Add(double z1, double z2)
-        {
-            double summe = z1 + z2;
-            return summe;
-        }
-
-        static double Multiply(double z1, double z2)
-        {
-            double summe = z1 * z2;
-            return summe;
-        }
-
-        static double subtract(double z1, double z2)
-        {
-            double summe = z1 - z2;
-            return summe;
-        }
-
-        static double divide(double z1, double z2)
-        {
-            double summe = z1 / z2;
-            return summe;
-        }
-        
-
-
-
-
-        ////static Rückgabetyp MethodenName (Parameter)
-        //static List<string> Number()
-        //{
-        //    List<string> name = new List<string>();
-        //    name.Add("ABC");
-
-        //    //Rückgabevariable
-        //    return name;
     }
 }

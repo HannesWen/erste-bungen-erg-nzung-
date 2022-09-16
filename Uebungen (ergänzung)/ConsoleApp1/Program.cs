@@ -54,36 +54,47 @@ namespace ConsoleApp1
 
             //Taschenrechner simpel
 
-            Console.WriteLine("Gebe mir eine Zahl");
-            int zahl1 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Gebe mir eine Zahl");
+            //int zahl1 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Was möchtest du mit der Zahl machen?");
-            string rechenzeichen = (Console.ReadLine());
+            //Console.WriteLine("Was möchtest du mit der Zahl machen?");
+            //string rechenzeichen = (Console.ReadLine());
 
-            Console.WriteLine("Gebe mir eine weitere Zahl");
-            int zahl2 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Gebe mir eine weitere Zahl");
+            //int zahl2 = Convert.ToInt32(Console.ReadLine());
 
-            double ergebnis = 0;
+            //double ergebnis = 0;
 
-            switch (rechenzeichen)
-            {
-                case "*":
-                    ergebnis = zahl1 * zahl2;
-                    Console.WriteLine(ergebnis);
-                    break;
-                case "/":
-                    ergebnis = zahl1 / zahl2;
-                    Console.WriteLine(ergebnis);
-                    break;
-                case "+":
-                    ergebnis = zahl1 + zahl2;
-                    Console.WriteLine(ergebnis);
-                    break;
-                case "-":
-                    ergebnis = zahl1 - zahl2;
-                    Console.WriteLine(ergebnis);
-                    break;
-            }
+            //switch (rechenzeichen)
+            //{
+            //    case "*":
+            //        ergebnis = zahl1 * zahl2;
+            //        Console.WriteLine(ergebnis);
+            //        break;
+            //    case "/":
+            //        ergebnis = zahl1 / zahl2;
+            //        Console.WriteLine(ergebnis);
+            //        break;
+            //    case "+":
+            //        ergebnis = zahl1 + zahl2;
+            //        Console.WriteLine(ergebnis);
+            //        break;
+            //    case "-":
+            //        ergebnis = zahl1 - zahl2;
+            //        Console.WriteLine(ergebnis);
+            //        break;
+            //}
+            //Console.ReadKey();
+
+
+            // Listen
+            //List<int> numbers = new List<int>();
+            List<string> names = new List<string>();
+            names.Add("Christian");
+            names.Add("Lukas");
+            names.Add("Andreas");
+            names.Add("Robert")           
+
             Console.ReadKey();
         }
     }

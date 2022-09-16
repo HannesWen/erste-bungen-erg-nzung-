@@ -10,24 +10,23 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // Listen
-            Console.WriteLine("Bitte gib mir einen Namen, wenn deine Liste fertig sein soll schreibe - ");
-            List<string> list = new List<string>();
-            string eingabe = "0";
-
-            do
+            Console.WriteLine("Wir holen uns jetzt eine Zahl aus Number");
+            List<string> names = Number();
+            foreach (var name in names)
             {
-                eingabe = Console.ReadLine();
-                list.Add(eingabe);
-            } while (eingabe != "-");
-
-            Console.WriteLine(list);
-
-            for (int i = 0; i < list.Count; i++)
-            {
-                Console.WriteLine(list[i]);
+                Console.WriteLine(name);
             }
             Console.ReadKey();
+        }
+
+        //static Rückgabetyp MethodenName (Parameter)
+        static List<string> Number()
+        {
+            List<string> name = new List<string>();
+            name.Add("ABC");
+
+            //Rückgabevariable
+            return name;
         }
     }
 }

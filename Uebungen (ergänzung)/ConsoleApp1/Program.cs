@@ -52,6 +52,7 @@ namespace ConsoleApp1
             double summe = z1 / z2;
             return summe;
         }
+        
 
 
 

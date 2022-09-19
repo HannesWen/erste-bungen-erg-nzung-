@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Net.Configuration;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,97 +15,70 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // Array befüllen und mit werten befüllen
-            //Random r = new Random();
-            //Console.WriteLine("Wie viele Einträge möchtest du in deinem int Array?");
-            //int arraygröße = Convert.ToInt32(Console.ReadLine());
-            //int[] zahlen = new int[arraygröße];
-            //for (int i = 0; i < arraygröße; i++)
+            //Car c1 = new Car(12345, "Audi", "A3", "2.0 TDI", 1980, "Red", 4);
+            //c1.PrintCarInformation();
+
+            //Car c2 = new Car(25642, "BMW", "3", "2.2", 2200, "Black", 4);
+
+            //c2.PrintCarInformation();
+
+            //List<Car> cars = new List<Car>();
+
+            //foreach (Car car in cars)
             //{
-            //    int random_zahl = r.Next(1, 100);
-            //    zahlen[i] = random_zahl;
+            //    car.PrintCarInformation();
             //}
-            //foreach (int zahl in zahlen)
-            //{
-            //    Console.WriteLine(zahl);
-            //}
-            //Console.ReadKey();
 
-            //Array befüllen und summe sowie durschnitt ausgeben
-            //Random r = new Random();
-            // Console.WriteLine("Wie viele Einträge möchtest du in deinem int Array?");
-            // int arraygröße = Convert.ToInt32(Console.ReadLine());
-            // int[] zahlen = new int[arraygröße];
-            // for (int i = 0; i < arraygröße; i++)
-            // {
-            //     int random_zahl = r.Next(1, 100);
-            //     zahlen[i] = random_zahl;
-            // }
-            // double durchschnitt = zahlen.Average();
-            // int summe = zahlen.Sum();
-            //Console.WriteLine($"Die Summe ist: {summe}");
-            //Console.WriteLine($"Der Durschschnitt ist: {durchschnitt}");
-            //Console.ReadKey();
+            //Console.ReadLine();
 
-            //Roulette
-            //Random r = new Random();
-            //int startwert = 10000;
-            //int dollar = 10000;
-            //int einsatz = 10;
-            //int runden = 0;
-            //do
-            //{
-            //    int k = r.Next(0, 37);
-            //    Console.WriteLine($"Du hast vor dem Spiel: {dollar} dollar.");
-            //    Console.WriteLine($"Runde {runden}.");
-            //    if (einsatz > dollar)
-            //    {
-            //        Console.WriteLine($"Dein neuer einsatz {einsatz} ist höher als deine dollar {dollar}.");
-            //        Console.WriteLine($"Du setzt nun all deine verbliebenen dollar {dollar}.");
-            //        einsatz = dollar;
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine($"Dein einsatz ist {einsatz}");
-            //    }
-            //    Console.WriteLine($"Die geworfene Zahl ist: {k}.");
-            //    if (k % 2 != 0)
-            //    {
-            //        Console.WriteLine($"Du lagst falsch. Der Einsatz {einsatz} wird dir abgebucht.");
-            //        dollar = dollar - einsatz;
-            //        einsatz = einsatz * 2;
-            //        if (einsatz >= 1000)
-            //        {
-            //            einsatz = 1000;
-            //        }
-            //    }
-            //    else if ((k % 2 == 0) && k > 0)
-            //    {
-            //        Console.WriteLine($"Du lagst richtig. Der Einsatz {einsatz} wird dir gutgeschrieben."); 
-            //        dollar = dollar + einsatz;
-            //        if (dollar >= 10000)
-            //        {
-            //            einsatz = 10;
-            //        }
-            //    }
-            //    Console.WriteLine($"Du hast nach dem Spiel: {dollar} dollar.");
-            //    Console.WriteLine();
-            //    runden = runden + 1;
-            //} while (dollar > 0);
-            //Console.WriteLine($"Das Spiel ist aus. Du hast {runden} runden gespielt und all dein Geld verloren.");
-            //Console.WriteLine("Da siehst du mal was Glücksspiel anrichten kann. Infos und Hilfe unter www.bzga.de."); 
-            //Console.ReadKey();
 
-            // "Aufgaben Wiederholung Tag 1", Seite 4, Aufgabe 1
-            List<int> numbers = new List<int>();
-            numbers.Add(5);
-            numbers.Add(3);
-            numbers.Add(7);
-            foreach (int i in numbers)
+            // Frage den User nach einer beliebigen Anzahl von Fahrzeugsätzen und lass sie wieder ausgeben.
+
+            Console.WriteLine("Wie viele Fahrzeuge möchtest du anlegen?");
+            int anzahl = Convert.ToInt32(Console.ReadLine());
+
+
+
+            List<Car> fahrzeugdaten = new List<Car>();
+
+
+            for (int i = 0; i < anzahl; i++)
             {
-                Console.WriteLine(i);
+                Console.WriteLine("Bitte gib mir folgende Fahrzeugdaten: TypeId, Make, Model, TypeName, Ccm, Color, Tyres");
+
+                int typeId = Convert.ToInt32(Console.ReadLine());
+                string make = Console.ReadLine();
+                string model = Console.ReadLine();
+                string typeName = Console.ReadLine();
+                int ccm = Convert.ToInt32(Console.ReadLine());
+                string color = Console.ReadLine();
+                int tyres = Convert.ToInt32(Console.ReadLine());
+
+                Car c1 = new Car(typeId, make, model, typeName, ccm, color, tyres);
+                fahrzeugdaten.Add(c1);
+            }
+            foreach (Car c in fahrzeugdaten)
+            {
+                c.PrintCarInformation();
             }
             Console.ReadKey();
+
+
+            //List<Cars> cars = new List<Car>();
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    cars.Add(Car.AskUserForCar());
+            //}
+
+            //foreach (Car car in cars)
+            //{
+            //    car.PrintCarInformation();
+            //}
+            //Console.ReadKey();
+
+
+
+
         }
     }
 }

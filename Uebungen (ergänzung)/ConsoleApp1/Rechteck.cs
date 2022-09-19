@@ -10,6 +10,12 @@ namespace ConsoleApp1
     {
         public float Seite1 { get; set; }
         public float Seite2 { get; set; }
+
+        public Rechteck(float seite1, float seite2)
+        {
+            Seite1 = seite1;
+            Seite2 = seite2;
+        }
         public float Flaeche()
         {
             return Seite1 * Seite1;

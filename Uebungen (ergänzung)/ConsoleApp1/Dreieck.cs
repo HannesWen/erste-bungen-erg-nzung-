@@ -11,6 +11,14 @@ namespace ConsoleApp1
         public float Seite1 { get; set; }
         public float Seite2 { get; set; }
         public float Seite3 { get; set; }
+
+        public Dreieck(float seite1, float seite2, float seite3)
+        {
+            Seite1 = seite1;
+            Seite2 = seite2;
+            Seite3 = seite3;
+        }
+
         public float Umfang()
         {
             return Seite1 + Seite2 + Seite3;

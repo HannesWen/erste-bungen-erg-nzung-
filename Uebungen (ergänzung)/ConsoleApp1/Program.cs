@@ -16,29 +16,20 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Dreieck d = new Dreieck();
-            d.Seite1 = 2;
-            d.Seite2 = 4;
-            d.Seite3 = 10;
+            Dreieck d = new Dreieck(2, 4, 10);
 
             float dreiecksfläche = d.Flaeche();
             float dreiecksUmfang = d.Umfang();
 
-            Circle c = new Circle();
-            c.Radius = 5;
+            Circle c = new Circle(5);
+
             float kreisFlaeche = c.Flaeche();
             float kreisUmfang = c.Umfang();
             
-            Rechteck r = new Rechteck();
-            r.Seite1 = 10;
-            r.Seite2 = 20;
+            Rechteck r = new Rechteck(10, 20);
 
             float rechtecksFlaeche = r.Flaeche();
             float rechtecksUmfang = r.Umfang();
-
-            Console.WriteLine($"Mein {d.GetType().Name} hat eine Fläche von {dreiecksfläche} und Umfang von {dreiecksUmfang}.");
-            Console.WriteLine($"Mein {d.GetType().Name} hat eine Fläche von {kreisFlaeche} und Umfang von {kreisUmfang}.");
-            Console.WriteLine($"Mein {d.GetType().Name} hat eine Fläche von {rechtecksFlaeche} und Umfang von {rechtecksUmfang}.");
 
             List<IGeometry> geometries = new List<IGeometry>();
             geometries.Add(d);
@@ -50,6 +41,22 @@ namespace ConsoleApp1
                 Console.WriteLine($"Mein {g.GetType().Name} eine Fläche " +
                     $"von {g.Flaeche()} und einen Umfang von {g.Umfang()}");
             }
+
+            List<Vehicle> fahrzeuge = new List<Vehicle>();
+            fahrzeuge.Add(new Motorcycle(523, "BMW", "GSXR 2000", "3.0", 3000, "Blau", 2));
+            fahrzeuge.Add(new Motorcycle(123, "VW", "Golf V", "2.0 TDI", 1900, "Rot", 4));
+
+            foreach (Vehicle v in fahrzeuge)
+            {
+                v.Starten();
+                v.Beschleunigen();
+                v.Beschleunigen();
+                v.Bremsen();
+                v.Starten();
+                v.Bremsen();
+                v.Bremsen();
+            }
+
             Console.ReadKey();
         }
     }

@@ -28,6 +28,19 @@ namespace ConsoleApp1
             Tyres = tyres;
         }
 
+        public static Car CarData()
+        {
+            int typeId = Convert.ToInt32(Console.ReadLine());
+            string make = Console.ReadLine();
+            string model = Console.ReadLine();
+            string typeName = Console.ReadLine();
+            int ccm = Convert.ToInt32(Console.ReadLine());
+            string color = Console.ReadLine();
+            int tyres = Convert.ToInt32(Console.ReadLine());
+
+            Car c1 = new Car(typeId, make, model, typeName, ccm, color, tyres);
+            return c1;
+        }
 
         public void PrintCarInformation()
         {

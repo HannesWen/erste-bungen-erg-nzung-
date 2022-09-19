@@ -37,25 +37,13 @@ namespace ConsoleApp1
             Console.WriteLine("Wie viele Fahrzeuge möchtest du anlegen?");
             int anzahl = Convert.ToInt32(Console.ReadLine());
 
-
-
             List<Car> fahrzeugdaten = new List<Car>();
-
 
             for (int i = 0; i < anzahl; i++)
             {
                 Console.WriteLine("Bitte gib mir folgende Fahrzeugdaten: TypeId, Make, Model, TypeName, Ccm, Color, Tyres");
 
-                int typeId = Convert.ToInt32(Console.ReadLine());
-                string make = Console.ReadLine();
-                string model = Console.ReadLine();
-                string typeName = Console.ReadLine();
-                int ccm = Convert.ToInt32(Console.ReadLine());
-                string color = Console.ReadLine();
-                int tyres = Convert.ToInt32(Console.ReadLine());
-
-                Car c1 = new Car(typeId, make, model, typeName, ccm, color, tyres);
-                fahrzeugdaten.Add(c1);
+                fahrzeugdaten.Add(Car.CarData());
             }
             foreach (Car c in fahrzeugdaten)
             {

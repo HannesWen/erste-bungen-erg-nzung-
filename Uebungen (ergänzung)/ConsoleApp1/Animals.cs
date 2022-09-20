@@ -8,27 +8,31 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Animal
+    public abstract class Animal 
     {
         public string Names { get; set; }
         public int Age { get; set; }
         public float Size { get; set; }
-        public string Durability { get; set; }
+        public string LifeSpan { get; set; }
         public float Weight { get; set; }
         public bool Fur { get; set; }
+        public bool Hungry { get; set; }
+        public bool Thirsty { get; set; }
 
-        public Animal(string names, int age, float size, string durability, float weight, bool fur)
+        public void Eating()
         {
-            Names = names;
-            Age = age;  
-            Size = size;
-            Durability = durability;
-            Weight = weight;
-            Fur = fur;
+            if (Hungry == true)
+            {
+                Console.WriteLine("Das Tier sollte etwas essen ?!?");
+            }
         }
-
-
-
+        public void Drinking()
+        {
+            if (Thirsty == true)
+            {
+                Console.WriteLine("Das Tier sollte etwas essen");
+            }
+        }
+        public abstract void Noises();
     }
-
 }

@@ -72,8 +72,6 @@ namespace ConsoleApp1
             Animal.Add(new Dog("Mr Sniffels", 7, 50, 14, 30, "yes"));
             Animal.Add(new Cat("Daisy", 3, 20, 10, 12, "yes" ))
 
-           
-
 
             Console.ReadKey();
         }

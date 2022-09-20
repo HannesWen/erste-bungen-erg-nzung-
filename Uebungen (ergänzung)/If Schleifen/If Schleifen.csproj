@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E93694C8-45D6-4542-B42C-BE4A8EC27DA4}</ProjectGuid>
+    <ProjectGuid>{9F1EC4D8-AC3A-4A2F-86CF-DA01A0F1A034}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp1</RootNamespace>
-    <AssemblyName>ConsoleApp1</AssemblyName>
+    <RootNamespace>If_Schleifen</RootNamespace>
+    <AssemblyName>If_Schleifen</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,27 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animals.cs" />
-    <Compile Include="Car.cs" />
-    <Compile Include="Cat.cs" />
-    <Compile Include="Circle.cs" />
-    <Compile Include="Dog.cs" />
-    <Compile Include="Dreieck.cs" />
-    <Compile Include="Frog.cs" />
-    <Compile Include="Geometry.cs" />
-    <Compile Include="House.cs" />
-    <Compile Include="If Schleifen.cs" />
-    <Compile Include="Lion.cs" />
-    <Compile Include="Motorcycle.cs" />
-    <Compile Include="Pig.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rechteck.cs" />
-    <Compile Include="Sheep.cs" />
-    <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include=".editorconfig" />
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
